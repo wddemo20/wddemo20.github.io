@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+	<input type="button" id="mybtn" value="Top" onClick="topFunction()" >
+	<nav id="navbar">
+		<ul>
+			<li>Home</li>
+			<li>Services</li>
+			<li>About</li>
+		</ul>
+	</nav>
+	<section id="banner">
+		<h1 >I'm <span class="element">Designer</span></h1>
+		<div class="social animate__animated animate__bounce">
+			<a><i class="fab fa-facebook-f"></i></a>
+			<a><i class="fab fa-behance"></i></a>
+			<a><i class="fab fa-instagram"></i></a>
+		</div>
+	</section>
+	<section id="about">
+		<figure data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+			<img src="img/about.jpg">
+		</figure>
+		<div class="ndabout">
+			<h3>I am Dev and Creative</h3>
+			<p>Impossible considered invitation him men instrument saw celebrated unpleasant. Put rest and must set kind next many near nay. He exquisite continued explained middleton am. Voice hours young woody has she think equal. Estate moment he at on wonder at season little. Six garden result summer set family esteem nay estate.<br><br>
+
+Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes intention smallness he northward.</p>
+		</div>
+	</section>
+	<section id="services">
+		<div class="thanghang">
+			<i class="fab fa-facebook-f"></i>
+			<h4>GRAPHIC DESIGNER</h4>
+			<p>Her extensive perceived may any sincerity extremity.</p>
+		</div>
+		
+	</section>
+	<section id="portfolio">
+		<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> All</button>
+  <button class="btn" onclick="filterSelection('webdesign')"> Wed Design</button>
+  <button class="btn" onclick="filterSelection('applications')"> Applications</button>
+  <button class="btn" onclick="filterSelection('development')"> Development</button>
+  
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="filterDiv webdesign"> <img src="img/home.jpg" style="width: 30px">
+	</div>
+  <div class="filterDiv webdesign applications">
+	<img src="img/about.jpg" style="width: 30px">
+	</div>
+  
+</div>
+		<input type="text" placeholder="Name" class="bocanh"><br>
+		<input type="email" placeholder="Email" class="bocanh"><br>
+		 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+	</section>
+	<footer>
+	
+	</footer>
+	<script>
+		filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+	</script>
+	<script>$('.collapse').collapse()</script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  AOS.init();
+		AOS.init({disable: 'mobile'});
+
+</script>
+<script>
+//Get the button:
+mybutton = document.getElementById("mybtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}	
+</script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script>
+		var options = {
+  strings: ['1HDFGDSFg', '2hflDJSHFlJSDf'],
+  typeSpeed: 40,
+			 fadeOut: true,
+    loop: true,
+			
+};
+
+var typed = new Typed('.element', options);
+	</script>
+	<script>
+		navv = document.getElementById("nav");
+		window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageXOffset > sticky) {
+    navbar.classList.add("sticky")
+	  navv.style.display = "block";
+  } else {
+    navbar.classList.remove("sticky");
+	  navv.style.display = "none";
+  }
+}
+	</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+}
+#banner{
+	background-image: url(img/home.jpg);
+	height: 100vh;
+	
+}
+#banner h1{
+	color: white;
+	font-size: 5em;
+	text-align: center;
+	padding-top: 20%;
+	
+}
+.social{
+	text-align: center;
+	padding-top: 10px;
+	
+}
+.social i{
+	color:white;
+	font-size: 2em;
+	padding-right: 20px;
+	
+}
+figure{
+	float: left;
+	width: 50%;
+	padding: 5%;
+	height: 200px;
+}
+figure img{
+	width: 100% !important;
+}
+.ndabout{
+	padding: 5% 5% 5% 0;
+	padding-left: 0px;
+	width: 30%;
+	float: right;
+}
+#about{
+	height: 700px;;
+}
+#services{
+	background-color: gray;
+	height: 400px;
+	
+}
+.thanghang{
+	display: inline-block;
+	float: left;
+	width: 20%;
+	padding:30px;
+	text-align: center;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#portfolio{
+	text-align: center;
+}
+
+.bocanh{
+	border: 0;
+	border-bottom: solid 2px #0200FF ;
+	
+}
+
+@media screen and (max-width: 375px){
+figure{
+	float: none;
+	width: 100%;
+	padding: 5%;
+}
+	.ndabout{	
+	width: 90%;
+}
+	
+}
+
+
+@-webkit-keyframes xoayvongvong {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+            transform: scale(1) rotateY(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateY(180deg);
+            transform: scale(2) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateY(360deg);
+            transform: scale(1) rotateY(360deg);
+  }
+}
+@keyframes xoayvongvong {
+  0% {
+    -webkit-transform: scale(1) rotateY(0);
+            transform: scale(1) rotateY(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateY(180deg);
+            transform: scale(2) rotateY(180deg);
+  }
+  100%{-webkit-transform: scale(1) rotateY(360deg);transform: scale(1) rotateY(360deg);
+  }
+}
+#mybtn{
+	background-color: red;
+	color: white;
+	position: fixed;
+	height: 20px;
+	width: 40px;
+	right: 30px;
+	bottom: 30px;
+	display: none;
+	
+}
+#navbar ul{
+	list-style-type: none;
+}
+#navbar li{
+	display: inline;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+	height: 50px;
+	background-color: white;
+}
+#navbar{
+}
+
+
+
+
+
+
+
